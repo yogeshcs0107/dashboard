@@ -1,0 +1,14 @@
+.row.marginTop{
+	margin-top:25px;
+}
+.selected{
+	background:blue;
+	color:#fff;
+}
+.jumbotron {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #eee;
+}

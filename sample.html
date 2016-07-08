@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.0/angular.min.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi?ext.js"></script>
+    <script type='text/javascript' src="newApp.js"></script>
+  </head>
+  <body ng-controller="MainCtrl">
+    <div class="jumbotron">
+      <h3>Q400 (iPad App)</h3>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Burn Up Chart</h4>
+          <burn-up-chart></burn-up-chart>
+        </div>
+        <div class="col-md-6">
+          <h4>Resource Allocation</h4>
+          <pie-chart></pie-chart>
+        </div>
+      </div>
+      <hr/>
+      <div class="row marginTop">
+        <div class="col-md-6">
+          <h4>Sprint Burn-down Chart- (Sprint-{{activeSprint}})</h4>
+          <burn-down-chart></burn-down-chart>
+        </div>
+        <div class="col-md-6">
+          <h4>Key Updates</h4>
+          <div ng-controller="LogTracker">
+           <table class="table">
+              <tr>
+              <th ng-repeat="head in heads">{{head}}</th>
+              </tr>
+              <tr ng-repeat="elements in body">
+                <td ng-repeat="element in elements.c">{{element.v}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <hr/>
+      <div class="row marginTop">
+        <div class="col-md-6">
+          <h4>Sprint Goals</h4>
+          <div ng-controller="SprintGoalsCtrl">
+            <ul>
+              <li>
+                <b>{{heads[0]}}</b>
+                <ul>
+                  <li ng-repeat='elements in body'>
+                    <span ng-repeat="element in elements">{{element[0].v}}</span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>{{heads[1]}}</b>
+                <ul>
+                  <li ng-repeat='elements in body' ng-show="elements.c[1].v != null">
+                    <span ng-repeat="element in elements">{{element[1].v}}</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h4>Sprint Time Stamps</h4>
+          <div ng-controller="SprintTimeStmpCtrl">
+           <table class="table">
+              <tr>
+              <th ng-repeat="head in heads">{{head}}</th>
+              </tr>
+              <tr ng-repeat="elements in body" ng-class="{ selected : elements.c[0].f == activeSprint}">
+               <td ng-repeat="element in elements.c">{{element.f}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </body>
+</html>
