@@ -17,3 +17,12 @@
 	border-radius:0;
 	width:100%;
 }
+.loader img{
+	height:65px;
+	width:65px;
+	margin:0px auto;
+	display:block;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}

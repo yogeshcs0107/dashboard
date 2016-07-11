@@ -6,6 +6,7 @@ app.controller('MainCtrl',function($scope){
     var query = new google.visualization.Query(url);
     query.send(handleQueryResponse);
     function handleQueryResponse(response){
+      $('.loader').hide();
       $scope.data = response.getDataTable();
       $scope.activeSprint = $scope.data.Nf[0].c[1].f;
       $scope.$digest();

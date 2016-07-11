@@ -4,22 +4,25 @@
     <link rel="icon" type="image/png" href="img/favicon.ico">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="http://code.angularjs.org/1.1.0/angular.min.js"></script>
     <script type="text/javascript" src="http://www.google.com/jsapi?ext.js"></script>
     <script type='text/javascript' src="newApp.js"></script>
   </head>
   <body ng-controller="MainCtrl">
     <div class="jumbotron">
-      <h3>Q400 (iPad App)</h3>
+      <h3 class="text-center">Q400 (iPad App)</h3>
     </div>
     <div class="container">
       <div class="row">
         <div class="col-md-6">
           <h4 class="btn btn-warning">Burn Up Chart</h4>
+          <div class="loader"><img src="loader.gif"></div>
           <burn-up-chart></burn-up-chart>
         </div>
         <div class="col-md-6">
           <h4 class="btn btn-primary">Resource Allocation</h4>
+          <div class="loader"><img src="loader.gif"></div>
           <pie-chart></pie-chart>
         </div>
       </div>
@@ -27,10 +30,12 @@
       <div class="row marginTop">
         <div class="col-md-6">
           <h4 class="btn btn-primary">Sprint Burn-down Chart- (Sprint-{{activeSprint}})</h4>
+          <div class="loader text-center"><img src="loader.gif"></div>
           <burn-down-chart></burn-down-chart>
         </div>
         <div class="col-md-6">
           <h4 class="btn btn-success">Key Updates</h4>
+          <div class="loader"><img src="loader.gif"></div>
           <div ng-controller="LogTracker">
            <table class="table">
               <tr>
@@ -47,8 +52,9 @@
       <div class="row marginTop">
         <div class="col-md-6">
           <h4 class="btn btn-warning">Sprint Goals</h4>
+          <div class="loader"><img src="loader.gif"></div>
           <div ng-controller="SprintGoalsCtrl">
-            <ul>
+            <ul ng-cloak>
               <li>
                 <b>{{heads[0]}}</b>
                 <ul>
@@ -70,6 +76,7 @@
         </div>
         <div class="col-md-6">
           <h4 class="btn btn-primary">Sprint Time Stamps</h4>
+          <div class="loader"><img src="loader.gif"></div>
           <div ng-controller="SprintTimeStmpCtrl">
            <table class="table">
               <tr>
