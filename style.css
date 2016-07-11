@@ -12,3 +12,8 @@
     color: inherit;
     background-color: #eee;
 }
+.btn{
+	cursor:default;
+	border-radius:0;
+	width:100%;
+}

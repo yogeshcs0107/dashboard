@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
   <head>
+    <link rel="icon" type="image/png" href="img/favicon.ico">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="http://code.angularjs.org/1.1.0/angular.min.js"></script>
@@ -14,22 +15,22 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h4>Burn Up Chart</h4>
+          <h4 class="btn btn-warning">Burn Up Chart</h4>
           <burn-up-chart></burn-up-chart>
         </div>
         <div class="col-md-6">
-          <h4>Resource Allocation</h4>
+          <h4 class="btn btn-primary">Resource Allocation</h4>
           <pie-chart></pie-chart>
         </div>
       </div>
       <hr/>
       <div class="row marginTop">
         <div class="col-md-6">
-          <h4>Sprint Burn-down Chart- (Sprint-{{activeSprint}})</h4>
+          <h4 class="btn btn-primary">Sprint Burn-down Chart- (Sprint-{{activeSprint}})</h4>
           <burn-down-chart></burn-down-chart>
         </div>
         <div class="col-md-6">
-          <h4>Key Updates</h4>
+          <h4 class="btn btn-success">Key Updates</h4>
           <div ng-controller="LogTracker">
            <table class="table">
               <tr>
@@ -45,7 +46,7 @@
       <hr/>
       <div class="row marginTop">
         <div class="col-md-6">
-          <h4>Sprint Goals</h4>
+          <h4 class="btn btn-warning">Sprint Goals</h4>
           <div ng-controller="SprintGoalsCtrl">
             <ul>
               <li>
@@ -68,7 +69,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <h4>Sprint Time Stamps</h4>
+          <h4 class="btn btn-primary">Sprint Time Stamps</h4>
           <div ng-controller="SprintTimeStmpCtrl">
            <table class="table">
               <tr>
