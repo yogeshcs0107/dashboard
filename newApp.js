@@ -1,7 +1,8 @@
 var app = angular.module('myApp', []);
 
 app.controller('MainCtrl',function($scope){
-  setInterval(function(){
+    $scope.activeSprint = '...';
+    setInterval(function () {
     var url = "https://docs.google.com/spreadsheets/d/1Ex4rmpPlYjnINL2dw8u93ADh7w8wpDiWF6zHgQpG7ZQ/gviz/tq?range=U1:V1";
     var query = new google.visualization.Query(url);
     query.send(handleQueryResponse);
