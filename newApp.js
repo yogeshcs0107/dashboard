@@ -95,7 +95,7 @@ app.directive('burnUpChart', function() {
           function handleQueryResponse(response){
             $scope.data = response.getDataTable();
             var options = {'width':400,
-                         'height':300};
+                         'height':200};
             var chart = new google.visualization.LineChart($elm[0]);
             chart.draw($scope.data, options);
           }
@@ -117,7 +117,7 @@ app.directive('burnDownChart', function() {
           function handleQueryResponse(response){
             $scope.data = response.getDataTable();
             var options = {'width':400,
-                         'height':300,
+                         'height':200,
                          'background':'#000'
                        };
             var chart = new google.visualization.LineChart($elm[0]);
@@ -141,7 +141,7 @@ app.directive('pieChart', function() {
           function handleQueryResponse(response){
             $scope.data = response.getDataTable();
             var options = {'width':400,
-                         'height':300,
+                         'height':200,
                          'is3D':true
                        };
             var chart = new google.visualization.PieChart($elm[0]);

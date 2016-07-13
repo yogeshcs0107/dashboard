@@ -10,10 +10,10 @@
     <script type='text/javascript' src="newApp.js"></script>
   </head>
   <body ng-controller="MainCtrl">
-    <div class="jumbotron">
-      <h3 class="text-center">Q400 (iPad App)</h3>
+    <div class="col-sm-3 col-md-2 sidebar">
+      <h3 class="text">Q400 (iPad App)</h3>
     </div>
-    <div class="container">
+    <div class="col-sm-offset-3 col-md-offset-2 col-md-10 dashboard_main">
       <div class="row">
         <div class="col-md-6">
           <h4 class="btn btn-warning">Burn Up Chart</h4>
@@ -26,7 +26,6 @@
           <pie-chart></pie-chart>
         </div>
       </div>
-      <hr/>
       <div class="row marginTop">
         <div class="col-md-6">
           <h4 class="btn btn-primary">Sprint Burn-down Chart(Sprint-{{activeSprint}})</h4>
@@ -48,7 +47,6 @@
           </div>
         </div>
       </div>
-      <hr/>
       <div class="row marginTop">
         <div class="col-md-6">
           <h4 class="btn btn-warning">Sprint Goals(Sprint-{{activeSprint}})</h4>

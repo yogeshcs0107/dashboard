@@ -1,6 +1,4 @@
-.row.marginTop{
-	margin-top:25px;
-}
+html, body {height: 100%;}
 .selected{
 	background:blue;
 	color:#fff;
@@ -25,4 +23,18 @@
 }
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #1f1f1f;
+    border-right: 1px solid #eee;
+    color:#fff;
 }
